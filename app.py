@@ -6,10 +6,8 @@ import joblib
 import pickle
 import tensorflow as tf 
 from keras.layers import Dense,LSTM,Embedding,Bidirectional,Dropout
-from keras.preprocessing.text import one_hot
-from sklearn.feature_extraction.text import CountVectorizer
 from keras.preprocessing.sequence import pad_sequences
-from keras.preprocessing.text import Tokenizer,one_hot
+from keras.preprocessing.text import Tokenizer
 import pandas as pd 
 import numpy as np
 from config import *
