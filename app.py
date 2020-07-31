@@ -17,7 +17,7 @@ import pickle
 import joblib
 
 
-filename = r'.\model\transform.pkl'
+filename = r'transform.pkl'
 cv = pickle.load(open(filename, 'rb'))
 
 app = Flask(__name__)
@@ -35,7 +35,7 @@ def predict():
         data = [message]
         vect = (cv.texts_to_sequences(data))
         vect = np.array(pad_sequences(vect,maxlen=30, dtype='int32', value=0))
-        clf=pickle.load(open(r'.\model\nlp_model.pkl','rb'))
+        clf=pickle.load(open(r'nlp_model.pkl','rb'))
         clf._make_predict_function()
         my_prediction = clf.predict(vect,batch_size=1,verbose = 2)[0]
         if my_prediction<0.5:
