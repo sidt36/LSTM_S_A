@@ -5,7 +5,7 @@ import pickle
 import joblib
 import pickle
 import tensorflow as tf 
-from tensorflow.keras.layers import Dense,LSTM,Embedding,Bidirectional,Dropout
+from keras.layers import Dense,LSTM,Embedding,Bidirectional,Dropout
 from keras.preprocessing.sequence import pad_sequences
 from keras.preprocessing.text import Tokenizer
 import pandas as pd 
