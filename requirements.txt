@@ -12,5 +12,5 @@ matplotlib>=1.4.3
 pandas>=0.19
 tensorflow
 setuptools>=40.3.0
-keras
+keras==2.3.1
 joblib
