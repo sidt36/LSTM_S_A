@@ -12,3 +12,6 @@ matplotlib>=1.4.3
 pandas>=0.19
 tensorflow==2.0.1
 setuptools>=40.3.0
+keras
+joblib
+pickle
