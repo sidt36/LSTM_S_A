@@ -1,14 +1,13 @@
   
 from flask import Flask,render_template,url_for,request
 import pandas as pd 
-import tensorflow as tf 
-from tensorflow.keras.layers import Dense,LSTM,Embedding,Bidirectional,Dropout
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras.preprocessing.text import Tokenizer
+from keras.layers import Dense,LSTM,Embedding,Bidirectional,Dropout
+from keras.preprocessing.sequence import pad_sequences
+from keras.preprocessing.text import Tokenizer
 import pandas as pd 
 import numpy as np
 from config import *
-from tensorflow.keras import Sequential
+from keras import Sequential
 import pickle
 import joblib
 
