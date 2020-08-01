@@ -32,6 +32,7 @@ def predict():
         vect = (cv.texts_to_sequences(data))
         vect = np.array(pad_sequences(vect,maxlen=30, dtype='int32', value=0))
         clf=pickle.load(open(r'nlp_model.pkl','rb'))
+	clf._make_predict_function()
         my_prediction = clf.predict(vect,batch_size=1,verbose = 2)[0]
         if my_prediction<0.5:
             my_prediction = 1
