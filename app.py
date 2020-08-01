@@ -42,7 +42,7 @@ def predict():
 	clf.load_weights("model.h5")
 	print("Loaded model from disk")
 	clf.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-        my_prediction = clf.predict(vect)[0]
+	my_prediction = clf.predict(vect)[0]
         if my_prediction<0.5:
             my_prediction = 1
         else:
