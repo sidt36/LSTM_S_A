@@ -9,6 +9,7 @@ from config import *
 from tensorflow.keras import Sequential
 import pickle
 import joblib
+from tensorflow.keras.models import model_from_json
 
 
 filename = r'transform.pkl'
