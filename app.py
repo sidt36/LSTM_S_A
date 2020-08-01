@@ -1,4 +1,4 @@
- import tensorflow as tf 
+import tensorflow as tf 
 from flask import Flask,render_template,url_for,request
 import pandas as pd 
 from tf.keras.layers import Dense,LSTM,Embedding,Bidirectional,Dropout
@@ -7,7 +7,7 @@ from tf.keras.preprocessing.text import Tokenizer
 import pandas as pd 
 import numpy as np
 from config import *
-from keras import Sequential
+from tf.keras import Sequential
 import pickle
 import joblib
 
