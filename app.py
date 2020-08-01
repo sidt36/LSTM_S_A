@@ -1,9 +1,9 @@
-  
+ import tensorflow as tf 
 from flask import Flask,render_template,url_for,request
 import pandas as pd 
-from keras.layers import Dense,LSTM,Embedding,Bidirectional,Dropout
-from keras.preprocessing.sequence import pad_sequences
-from keras.preprocessing.text import Tokenizer
+from tf.keras.layers import Dense,LSTM,Embedding,Bidirectional,Dropout
+from tf.keras.preprocessing.sequence import pad_sequences
+from tf.keras.preprocessing.text import Tokenizer
 import pandas as pd 
 import numpy as np
 from config import *
