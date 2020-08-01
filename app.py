@@ -1,4 +1,5 @@
 import tensorflow as tf 
+tf = tensorflow
 from flask import Flask,render_template,url_for,request
 import pandas as pd 
 from tf.keras.layers import Dense,LSTM,Embedding,Bidirectional,Dropout
