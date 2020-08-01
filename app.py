@@ -29,8 +29,18 @@ def predict():
         data = [message]
         vect = (cv.texts_to_sequences(data))
         vect = np.array(pad_sequences(vect,maxlen=30, dtype='int32', value=0))
-        clf=pickle.load(open(r'nlp_model.pkl','rb'))
+        #clf=pickle.load(open(r'nlp_model.pkl','rb'))
 	#clf._make_predict_function()
+	
+	# load json and create model
+	json_file = open('model.json', 'r')
+	clf = json_file.read()
+	json_file.close()
+	clf = model_from_json(loaded_model_json)
+	# load weights into new model
+	clf.load_weights("model.h5")
+	print("Loaded model from disk")
+	clf.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
         my_prediction = clf.predict(vect)[0]
         if my_prediction<0.5:
             my_prediction = 1
